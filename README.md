@@ -9,12 +9,12 @@ In Croatia there is relatively little research on Greek and Latin syntax. Views 
 
 On the other hand, contemporary global initiatives led by the [Perseus Project (Tufts University)](http://www.perseus.tufts.edu/hopper/) and the [Open Philology Project (University of Leipzig)](http://www.dh.uni-leipzig.de/wo/open-philology-project/) have brought all classicists a valuable resource for analyzing Greek and Latin syntax from a wholly different linguistic perspective, the one of computational analysis and dependency grammar. The [Ancient Greek and Latin Dependency Treebank (AGLDT)](https://perseusdl.github.io/treebank_data/) is an ongoing project of digital syntactical annotation of ancient texts according to a dependency grammar model following the [Prague Dependency Treebank](https://ufal.mff.cuni.cz/pdt2.0/) principles; in the AGLDT, each sentence “tree” consists of “nodes” connected hierarchically and marked by grammatical relation labels on the basis of their relationship with their governor nodes. Currently the AGLDT collection holds several thousand sentences annotated by over 200 people; it is published as Open Data, which means that anybody can not only use it, but also enhance it, or adapt it to any purpose.
 
-To illustrate possibilities of the AGLDT, which at the moment happens to contain large parts of [Polybius' Histories](http://www.perseids.org/tools/arethusa/app/#/perseids?chunk=1&doc=27694), I will provide an overview of the structure of his sentences. Such an investigation fittingly complements previous interpretations of Polybius' language and linguistic choices, the topics for which, as has been stated recently ([Langslow 2012](http://www.bibsonomy.org/bibtex/283c6fd3b1984fa8969cb6079f8ce00d5/filologanoga)), “further research is needed”.
+To illustrate possibilities of the AGLDT, which at the moment happens to contain large parts of [Polybius's Histories](http://www.perseids.org/tools/arethusa/app/#/perseids?chunk=1&doc=27694), I will provide an overview of the structure of his sentences. Such an investigation fittingly complements previous interpretations of Polybius' language and linguistic choices, the topics for which, as has been stated recently ([Langslow 2012](http://www.bibsonomy.org/bibtex/283c6fd3b1984fa8969cb6079f8ce00d5/filologanoga)), “further research is needed”.
 
 
 ## How to use
 
-This repository contains scripts needed to build a XML database of Polybius Book 1 with treebank and morphology annotations, and to analyse the database.
+This repository contains scripts needed to build a XML database of Polybius's Book 1 with treebank and morphology annotations, and to analyse the database.
 
 ### Prerequisites
 
@@ -24,15 +24,18 @@ Some working knowledge of command line, Git, XML, XQuery, and BaseX.
 + [BaseX](http://basex.org/), a (freely available) XML Database engine and XPath/XQuery 3.1 Processor 
 ### Building the database
 
-Install software as necessary (Git and BaseX).
+Install the software as necessary (Git and BaseX).
 
-Clone this repository and, from BaseX, run the [scripts/create-polybius-db.bxs](scripts/create-polybius-db.bxs). The script will pull the latest version of the Polybius treebank XML document from the [Ancient Greek and Latin Dependency Treebank (AGLDT)](https://perseusdl.github.io/treebank_data/) repository.
+Using Git, clone this repository.  From BaseX, run the [scripts/create-polybius-db.bxs](scripts/create-polybius-db.bxs). The script will pull the latest version of the Polybius treebank XML document from the [Ancient Greek and Latin Dependency Treebank (AGLDT)](https://perseusdl.github.io/treebank_data/) Github repository.
 
 ### Exploring the database
 
++ How many sentences and words are there in Polybius's Book 1?
 + Which functions are there in the sentences of Polybius's Book 1?
 + How many occurrences of each function is there?
-+ How many children nodes are contained each function?
++ What is the maximum and minimun number of children nodes contained by each function?
++ What do Polybius's predicates consist of?
++ What do Polybius's subjects consist of?
 
 # License
 
