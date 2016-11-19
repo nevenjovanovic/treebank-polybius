@@ -33,3 +33,7 @@ Clone this repository and, from BaseX, run the [scripts/create-polybius-db.bxs](
 + Which functions are there in the sentences of Polybius's Book 1?
 + How many occurrences of each function is there?
 + How many children nodes are contained each function?
+
+# License
+
+[CC-BY](LICENSE.md)
