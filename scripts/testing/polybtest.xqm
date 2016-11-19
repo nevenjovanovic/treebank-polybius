@@ -24,4 +24,9 @@ declare %unit:test function test:count-s-w() {
 
 (: can we get a list of @relation attributes? :)
 
+declare %unit:test function test:distinct-relations() {
+  for $counts in polyb:distrels()//tr[parent::tbody]/td[2]
+  return unit:assert(xs:integer(data($counts)))
+};
+
 (: can we get count of @relation values? :)
