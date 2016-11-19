@@ -1,21 +1,35 @@
-# CroALa index locorum: a gazetteer of place names in Croatian Latin texts
-
-A project supported by a [Pelagios Commons resource development grant](http://commons.pelagios.org/2016/07/announcing-the-pelagios-commons-resource-development-grant-recipients/).
-
-Using the CITE Architecture, a number of analytical exemplars of the CroALa texts, and elements from different formal ontologies, a set of place name references in the text will be semantically annotated. The annotations will be reviewed and published according to the [Pelagios guidelines for interconnection](https://github.com/pelagios/pelagios-cookbook/wiki).
-
-
-## PI
+# Exploring Polybius's syntax with dependency trees
 
 [Neven Jovanović](orcid.org/0000-0002-9119-399X), Department of Classical Philology, Faculty of Humanities and Social Sciences, 
 University of Zagreb
 
-## Contents
+## Introduction
 
-See the [wiki](https://github.com/nevenjovanovic/croala-pelagios/wiki) for guidelines on annotation and annotating strategies.
+In Croatia there is relatively little research on Greek and Latin syntax. Views of classicists are traditionally shaped by school grammars such as, for the Greek, [Musić (1887)](http://www.bibsonomy.org/bibtex/2b2ead1c31826bd64b2ce72e2c81ebda1/filologanoga) and [Dukat (1983)](http://www.bibsonomy.org/bibtex/29b4c41cc65c361e7dc185270f2530ca4/filologanoga). Intended as reference books for young Croatian learners, to be supplemented by teacher's intervention and students' understanding of their first language, these works have effectively suppressed different approaches (attempted in e. g. [Macun 1853](http://www.bibsonomy.org/bibtex/20a208a5a02003fd2c84a928713e3960c/filologanoga)).  At the same time, both Musić and Dukat display unexpected blind spots, especially in syntax, where little attention has been given to the parts of the sentence (for example, adverbials are almost completely omitted).
 
-The pilot for CITE analyses is in [CSV](csv/pilot). The resulting RDF files are in [rdf](rdf). The scripts (mostly Python) are in [scripts](scripts).
+On the other hand, contemporary global initiatives led by the [Perseus Project (Tufts University)](http://www.perseus.tufts.edu/hopper/) and the [Open Philology Project (University of Leipzig)](http://www.dh.uni-leipzig.de/wo/open-philology-project/) have brought all classicists a valuable resource for analyzing Greek and Latin syntax from a wholly different linguistic perspective, the one of computational analysis and dependency grammar. The [Ancient Greek and Latin Dependency Treebank (AGLDT)](https://perseusdl.github.io/treebank_data/) is an ongoing project of digital syntactical annotation of ancient texts according to a dependency grammar model following the [Prague Dependency Treebank](https://ufal.mff.cuni.cz/pdt2.0/) principles; in the AGLDT, each sentence “tree” consists of “nodes” connected hierarchically and marked by grammatical relation labels on the basis of their relationship with their governor nodes. Currently the AGLDT collection holds several thousand sentences annotated by over 200 people; it is published as Open Data, which means that anybody can not only use it, but also enhance it, or adapt it to any purpose.
 
-The pilot text, consisting of several editions of Nicholas' of Modruš 1474 funeral oration for Pietro Riario and their CTS support files, is in [editions](editions).
+To illustrate possibilities of the AGLDT, which at the moment happens to contain large parts of [Polybius' Histories](http://www.perseids.org/tools/arethusa/app/#/perseids?chunk=1&doc=27694), I will provide an overview of the structure of his sentences. Such an investigation fittingly complements previous interpretations of Polybius' language and linguistic choices, the topics for which, as has been stated recently ([Langslow 2012](http://www.bibsonomy.org/bibtex/283c6fd3b1984fa8969cb6079f8ce00d5/filologanoga)), “further research is needed”.
 
-The documentation is on the [wiki](https://github.com/nevenjovanovic/croala-pelagios/wiki) and in [docs](docs).
+
+## How to use
+
+This repository contains scripts needed to build a XML database of Polybius Book 1 with treebank and morphology annotations, and to analyse the database.
+
+### Prerequisites
+
+Some working knowledge of command line, Git, XML, XQuery, and BaseX.
+
++ [Git](https://git-scm.com/), a free and open source distributed version control system
++ [BaseX](http://basex.org/), a (freely available) XML Database engine and XPath/XQuery 3.1 Processor 
+### Building the database
+
+Install software as necessary (Git and BaseX).
+
+Clone this repository and, from BaseX, run the [scripts/create-polybius-db.bxs](scripts/create-polybius-db.bxs). The script will pull the latest version of the Polybius treebank XML document from the [Ancient Greek and Latin Dependency Treebank (AGLDT)](https://perseusdl.github.io/treebank_data/) repository.
+
+### Exploring the database
+
++ Which functions are there in the sentences of Polybius's Book 1?
++ How many occurrences of each function is there?
++ How many children nodes are contained each function?
