@@ -3,6 +3,8 @@
 [Neven Jovanović](orcid.org/0000-0002-9119-399X), Department of Classical Philology, Faculty of Humanities and Social Sciences, 
 University of Zagreb
 
+![Greek vase detail](referat/2016-jovanovic-polybius/img/polybius-vase.jpg)
+
 ## Introduction
 
 In Croatia there is relatively little research on Greek and Latin syntax. Views of classicists are traditionally shaped by school grammars such as, for the Greek, [Musić (1887)](http://www.bibsonomy.org/bibtex/2b2ead1c31826bd64b2ce72e2c81ebda1/filologanoga) and [Dukat (1983)](http://www.bibsonomy.org/bibtex/29b4c41cc65c361e7dc185270f2530ca4/filologanoga). Intended as reference books for young Croatian learners, to be supplemented by teacher's intervention and students' understanding of their first language, these works have effectively suppressed different approaches (attempted in e. g. [Macun 1853](http://www.bibsonomy.org/bibtex/20a208a5a02003fd2c84a928713e3960c/filologanoga)).  At the same time, both Musić and Dukat display unexpected blind spots, especially in syntax, where little attention has been given to the parts of the sentence (for example, adverbials are almost completely omitted).
