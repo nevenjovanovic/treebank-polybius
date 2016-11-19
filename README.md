@@ -33,9 +33,17 @@ Using Git, clone this repository.  From BaseX, run the [scripts/create-polybius-
 + How many sentences and words are there in Polybius's Book 1?
 + Which functions are there in the sentences of Polybius's Book 1?
 + How many occurrences of each function is there?
-+ What is the maximum and minimun number of children nodes contained by each function?
++ What is the maximum and minimum number of children nodes contained by each function?
 + What do Polybius's predicates consist of?
 + What do Polybius's subjects consist of?
+
+## Tests
+
+The scripts for this analysis were coded using the [Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) process and the [BaseX Unit test module](http://docs.basex.org/wiki/Unit_Module). Test for the scripts are in the [scripts/testing](scripts/testing) directory. You may want to run the tests to see whether everything works as intended.
+
+## Transforming flat sentence structure into nested trees
+
+Dependencies that we want to analyse are easier to access if the original XML treebank is transformed from a "flat" structure (one sentence with many word nodes as children) into a "tree" (each governor-node word contains all word-nodes dependent on it). This transformation is achieved with the [scripts/transform-flat-into-tree.xq](scripts/transform-flat-into-tree.xq) script.
 
 # License
 
