@@ -1,0 +1,2 @@
+XQUERY db:create("polybius-db-t", "https://github.com/nevenjovanovic/treebank-polybius/blob/master/transform/tlg0543.tlg001.perseus-grc1.tb-nested.xml?raw=true", (), map { 'ftindex': true(), 'intparse' : true(), 'autooptimize' : true(), 'updindex' : true() })
+CREATE BACKUP polybius-db-t
