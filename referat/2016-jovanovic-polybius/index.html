@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Exploring Polybius' syntax with dependency trees</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Neven Jovanović">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				  <h2>Exploring</h2>
+				  <h1>Polybius's syntax</h1>
+				  <h2>with dependency trees</h2>
+					<p>
+					  <a href="http://orcid.org/0000-0002-9119-399X">Neven Jovanović</a> / neven.jovanovic@ffzg.hr<br/>University of Zagreb<br/>
+					  <small>Skopje, 22 November 2016</small>
+					</p>
+<p>
+  Address of this page:<br/><a href="http://croala.ffzg.unizg.hr/2016-croala-aiucd/2016-croala-aiucd.html">croala.ffzg.unizg.hr/2016-jovanovic-polybius/</a>
+					</p>
+				</section>
+
+				
+<section>
+<h2>The plan</h2>
+<p class="fragment"><b>What?</b></p>
+<p class="fragment"><b>How?</b> (At random, precisely, topically, comparatively)</p>
+<p class="fragment"><b>To what end?</b></p>
+</section>
+<section><h1>What?</h1></section>
+<section>
+					
+  <h2>Polybius in the Perseus Catalog</h2>
+  <p>Textgroups: tlg0543<br/>
+    CITE id: <a href="http://catalog.perseus.org/catalog/urn:cite:perseus:author.1154">urn:cite:perseus:author.1154</a></p>
+  <p>Works Currently Cataloged: <b>Histories</b><br/>
+    URN: <a href="http://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0543.tlg001">urn:cts:greekLit:tlg0543.tlg001</a></p>
+</section>
+<section>
+					
+  <h2>Croatiae auctores Latini</h2>
+  <p>Currently in CroALa: 5.7 million words, 467 documents, bibliographic data.</p>
+  <p>First edition 2009<br/>ISBN: 978-953-175-356-2</p>
+  <p><a href="http://croala.ffzg.unizg.hr">croala.ffzg.unizg.hr</a> (PhiloLogic 3)
+    <br/>
+    <a href="http://solr.ffzg.hr/philo4/croala0">PhiloLogic 4</a>
+    <br/>
+    <a href="http://croala.ffzg.unizg.hr/basex/croalatituli">BaseX</a>
+    <br/>
+    <a href="https://github.com/nevenjovanovic/croatiae-auctores-latini-textus">Github</a>
+  </p>
+  <p>License: CC-BY.</p>
+</section>
+<section>
+  <h2>A tale of two sets</h2>
+<img src="images/croala-auctores-periodi.png"/>
+</section>
+<section>
+  <h1>How?</h1>
+</section>
+<section>
+  <h2>A "black box"?</h2>
+  <p>Our experience of the text is constrained<br/>by print (in a book),<br/>by a concordancer (PhiloLogic),<br/>by a markup model system (TEI XML).</p>
+  <p>Each framework is at the same time a help and an impediment.</p>
+</section>
+<section>
+  <h1>Flight from literature?</h1>
+  <p class="fragment"><a href="http://croala.ffzg.unizg.hr/basex/quaelibet">croala.ffzg.unizg.hr/basex/quaelibet</a></p>
+  <p class="fragment"><a href="https://bitbucket.org/nevenjovanovic/croalatransform/src/427358bc13e0414dc6fa146e6df4f53a4696a94b/xq/croala-explore/croala-explore.md?at=default&fileviewer=file-view-default">Documentation</a> (Bitbucket)</p>
+</section>
+<section>
+  <h1>How to point to a segment of text?</h1>
+</section>
+<section>
+  <h1>CITE/CTS</h1>				
+  <p><b>CITE Architecture and Canonical Text Service</b></p>
+  <p>Christopher Blackwell, Neel Smith (2010)</p>
+  <p>A specification for technology independent,
+    machine-actionable citation of scholarly resources.</p>
+  <p>eXist / XQuery, angularJs / jQuery, RDF, MySQL<br/>Homer Multitext, Perseus Digital Library.</p>
+  
+</section>
+<section>
+  <h1>A CTS URN</h1>
+  <h3>From CroALa</h3>
+<p>
+  urn:cts:croala:tubero.commentarii.croala-loci:body1.div9.div3.p2.s8.placeName26
+</p>
+</section>
+<section>
+  <h1>A CTS URN</h1>
+    <h3>From CroALa</h3>
+<p>
+  <font color="red">urn</font>:<font color="green">cts</font>:croala:<font color="blue">tubero</font>.<font color="fuchsia">commentarii</font>.<font color="maroon">croala-loci</font>:<font color="#330033">body1.div9.div3.p2.s8.placeName26</font>
+</p>
+</section>
+<section>
+  <h1>A CTS URN</h1>
+    <h3>From CroALa</h3>
+  <p>
+    <a href="http://croala.ffzg.unizg.hr/basex/cts/urn:cts:croala:tubero.commentarii.croala-loci:body1.div9.div3.p2.s8.placeName26">urn:cts:croala:tubero.commentarii.croala-loci:body1.div9.div3.p2.s8.placeName26</a>
+</p>
+</section>
+<section>
+  <h2>Insights from the CITE/CTS model</h2>
+  <p><b>Multiple</b> editions of the same text, each for a <b>specific, individual</b> purpose (text segmented into paragraphs, sentences, words and interpunction, metrical units; text marked for morphology, topics, named entities), each with <b>easily reachable</b> locations.</p>
+  <p>The system is <b>reproducible</b>; it is <b>tractable by machines</b>; it is <b>open to others</b>.</p>`
+  </section>
+<section>
+  <h2>Insights from the CITE/CTS model</h2>
+  <p>Multiple notes point at locations:<br/>this location refers to a PLACE during a PERIOD.</p>
+  <p>Notes define relationships of points in different editions:<br/>this NOUN in ACCUSATIVE is a PLACE NAME referring to a FICTIONAL PLACE.</p>
+  <p>The system is reproducible; it is tractable by machines ("how many locations refer to places? in which parts of the text?"); it may be opened to others.</p>`
+  <p>Cf. a <a href="http://croala.ffzg.unizg.hr/basex/cp/list">test set of CroALA CTS URNs</a></p>
+</section>
+
+<section>
+  <h2>Cur lingua rerum index sit</h2>
+  <p>(Marko Marulić, <a href="http://croala.ffzg.unizg.hr/cgi-bin/getobject.pl?c.72:2:585.croala.2571915">Repertorium, Problemata Aristotelis</a>)</p>
+    <h3>Approaching CroALa through indices</h3>
+</section>
+<section>
+  <h2>Approaching CroALa through indices</h2>
+  <p>A list of <a href="http://solr.ffzg.hr/basex/wpersonae">persons in Croatian Latin school drama</a></p>
+  <p>A list of <a href="http://croala.ffzg.unizg.hr/basex/cp/citelist">place references</a> in CroALa as a CITE/CTS system<br/>(an ongoing collaboration with <a href="http://commons.pelagios.org/">Pelagios</a>)</p>
+
+</section>
+<section>
+  <h2>Ricorditi, lettor, se mai...</h2>
+  <h3>Approaching CroALa through comparation</h3>
+</section>
+<section>
+  <h2>Approaching CroALa through comparation</h2>
+  <p>Some of the interesting clausulae (verse endings) from the Poeti d' Italia in lingua latina occurring in CroALa as well: <a href="http://solr.ffzg.hr/basex/static/pdill-croalaren-uniq-rep3-longest-28.html">Clausulae trium verborum</a></p>
+  <p>Counting Latin authors in Croatia and in Tyrol:<br/><a href="http://solr.ffzg.hr/basex/auctores/periodi2">Croatica et Tyrolensia</a></p>
+</section>
+<section>
+  <h1>To what end?</h1>
+  <h3>(Conclusions)</h3>
+</section>
+<section>
+
+  <p>In the struggles with material agency [our] plans and goals too
+are at stake and liable to revision.  And thus the intentional
+character of human agency has a further aspect of temporal emergence,
+being reconfigured itself in the real time of practice, as well as a
+further aspect of intertwining with material agency, being
+reciprocally redefined with the contours of material agency in
+    tuning.
+    </p>
+    <p>
+    Andrew Pickering, <em>The Mangle of Practice: Time, Agency,
+      and Science</em> (1995)</p>
+</section>
+<section>
+  <p>What had started as an <em>ad hoc</em> collection of TEI-encoded texts with time grew into a forest; the forest needed a map, and there was a thing that could be developed into a map; we needed specific parts of the forest, and there were things that could be used to extract parts of it; we realized that similar plants are growing in other forests, and there were things that could be used to compare plants.</p>
+  <p>What had started as a collection of texts turned into something that has to be "manipulated" &mdash; accessed &mdash; at the atomic and molecular level. These levels, and processes of accessing them, turn out to be intriguing in themselves, beyond engineering (when there is a reference to the <em>urbes Italiae</em>, it seems to refer to...).</p>
+</section>
+<section>
+  <h1>To be continued</h1>
+</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+			center: true,
+			loop: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

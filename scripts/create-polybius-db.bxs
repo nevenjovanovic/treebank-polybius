@@ -1,0 +1,2 @@
+XQUERY db:create("polybius-db", "https://github.com/PerseusDL/treebank_data/blob/master/v2.1/Greek/texts/tlg0543.tlg001.perseus-grc1.tb.xml?raw=true", (), map { 'ftindex': true(), 'chop': false(), 'intparse' : true(), 'autooptimize' : true(), 'updindex' : true() })
+CREATE BACKUP polybius-db
