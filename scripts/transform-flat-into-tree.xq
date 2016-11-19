@@ -9,7 +9,7 @@ return element w {
   return local:children($sentence, $ww)
 }
 };
-
+let $result :=
 element treebank {
 for $s in //sentence
 let $s_id := $s/@id
@@ -19,3 +19,4 @@ for $w in $s/word[@head="0"]
 return local:children($s, $w)
 }
 }
+return file:write("/home/neven/ownCloud/documents/sitno/skopje/referat/treebank-polybius/transform/tlg0543.tlg001.perseus-grc1.tb-nested.xml", $result)
