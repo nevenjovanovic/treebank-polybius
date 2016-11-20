@@ -147,3 +147,18 @@ let $labels := ("Number of children nodes", "Occurrences")
 return polyb:table($labels , $body)
 else $stat
 };
+
+(: for a relation with a certain number of descendant nodes, return all morphological annotations :)
+declare function polyb:morph ($relation, $count) {
+  element tbody {
+for $w in db:open("polybius-db-t")//sentence//w[@relation=$relation]
+let $pos := $w/@postag
+where count($w/descendant-or-self::w) = $count
+group by $pos
+order by $pos
+return element tr {
+  element td { data($pos)},
+  element td { count($w)}
+}
+}
+};
