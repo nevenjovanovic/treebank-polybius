@@ -219,3 +219,8 @@ table.numb > tbody > tr td:first-child::before {
     min-width: 1em;
     margin-right: 0.5em;
 }
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+}
