@@ -5,7 +5,7 @@ import module namespace polyb = "http://croala.ffzg.unizg.hr/polyb" at '../../re
 
 declare namespace page = 'http://basex.org/examples/web-page';
 
-declare variable $title := "Occurences of counts of dependent nodes for a syntactic relation in the Polybius treebank";
+declare variable $title := "Occurrences of counts of dependent nodes for a syntactic relation in the Polybius treebank";
 declare variable $content := "For a syntactic relation, display breakdown by number of dependent nodes and by number of occurrences in the Polybius's treebank from the AGLDT project.";
 declare variable $keywords := "Ancient Greek language, Prague dependency treebank, syntax, XML, XQuery, scholarly edition, history of Greek language, Open Philology, Perseus Digital Library, syntactic relation, Polybius";
 
