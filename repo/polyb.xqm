@@ -136,7 +136,7 @@ return if ($stat//td) then
     element td { count($s)}
   }
 }
-let $labels := ("Number of children nodes", "Occurrences")
+let $labels := ("Number of dependent nodes", "Number of occurrences")
 return polyb:table($labels , $body)
 else $stat
 };
