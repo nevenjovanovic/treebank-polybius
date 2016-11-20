@@ -152,7 +152,7 @@ else $stat
 declare function polyb:morph ($relation, $count) {
   element tbody {
 for $w in db:open("polybius-db-t")//sentence//w[@relation=$relation]
-let $pos := $w/@postag
+let $pos := if ($w/@postag) then $w/@postag else $w/@artificial
 where count($w/descendant-or-self::w) = $count
 group by $pos
 order by $pos
