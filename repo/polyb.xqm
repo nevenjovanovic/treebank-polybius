@@ -25,7 +25,7 @@ declare function polyb:footerserver () {
 let $f := <footer class="footer">
 <div class="container">
 <h3> </h3>
-<h1 class="text-center"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> <a href="https://github.com/nevenjovanovic/treebank-polybius">Github</a></h1>
+<h1 class="text-center"><a href="https://github.com/nevenjovanovic/treebank-polybius" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a></h1>
 <div class="row">
 <div  class="col-md-3">
 </div> 
