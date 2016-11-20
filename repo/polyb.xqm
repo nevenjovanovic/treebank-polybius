@@ -1,4 +1,62 @@
 module namespace polyb = "http://croala.ffzg.unizg.hr/polyb";
+
+(: HTML functions :)
+
+(: helper function for header, with meta :)
+declare function polyb:htmlheadserver($title, $content, $keywords) {
+  (: return html template to be filled with title :)
+  (: title should be declared as variable in xq :)
+
+<head><title> { $title } </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="{ $keywords }"/>
+<meta name="description" content="{$content}"/>
+<meta name="revised" content="{ current-date()}"/>
+<meta name="author" content="Neven Jovanović, Department of Classical Philology, Faculty of Humanities and Social Sciences, University of Zagreb" />
+<link rel="icon" href="/basex/static/gfx/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/basex/static/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/basex/static/dist/css/basexpolyb.css"/>
+</head>
+
+};
+
+(: formatting - footer on solr :)
+declare function polyb:footerserver () {
+let $f := <footer class="footer">
+<div class="container">
+<h3> </h3>
+<h1 class="text-center"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> <a href="https://github.com/nevenjovanovic/treebank-polybius">Github</a></h1>
+<div class="row">
+<div  class="col-md-3">
+</div> 
+<div  class="col-md-6">
+<p class="text-center"><a href="http://www.ffzg.unizg.hr"><img src="/basex/static/gfx/ffzghrlogo.png"/> Filozofski fakultet</a> Sveučilišta u Zagrebu</p> 
+</div>
+<div  class="col-md-3"></div></div>
+</div>
+</footer>
+return $f
+};
+
+declare function polyb:infodb($dbname) {
+  (: return info on croalabib db, with Latin field names :)
+let $week := map {
+  "name": "nomen",
+  "documents": "documenta",
+  "timestamp": "de dato"
+}
+return element table { 
+attribute class { "pull-right"},
+let $i := db:info($dbname)/databaseproperties
+  for $n in ('name','documents','timestamp')
+  return 
+   element tr {
+    element td { map:get($week, $n) } ,
+    element td { $i/*[name()=$n] }
+  }
+}
+};
+
 (: Functions to explore Polybius's treebanks :)
 
 (: count sentence and word nodes in the treebank doc :)

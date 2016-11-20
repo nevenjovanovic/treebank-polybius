@@ -1,8 +1,6 @@
 (: Explore Polybius's treebanks :)
 (: return a list of relations :)
 import module namespace rest = "http://exquery.org/ns/restxq";
-import module namespace croala = "http://www.ffzg.unizg.hr/klafil/croala" at "../../repo/croala.xqm";
-import module namespace vit = "http://croala.ffzg.unizg.hr/vit" at "../../repo/vitezovic.xqm";
 import module namespace polyb = "http://croala.ffzg.unizg.hr/polyb" at '../../repo/polyb.xqm';
 
 declare namespace page = 'http://basex.org/examples/web-page';
@@ -35,7 +33,7 @@ declare
   (: HTML template starts here :)
 
 <html>
-{ vit:htmlheadserver($title, $content, $keywords) }
+{ polyb:htmlheadserver($title, $content, $keywords) }
 <body text="#000000">
 
 <div class="jumbotron">
@@ -48,7 +46,7 @@ declare
 <p>Name of the function: {rest:uri()}.</p>
 </div>
 <div class="col-md-6">
-{croala:infodb('polybius-db-t')}
+{polyb:infodb('polybius-db-t')}
 </div>
 </div>
 </div>
@@ -63,7 +61,7 @@ declare
      <p/>
      </div>
 <hr/>
-{ croala:footerserver() }
+{ polyb:footerserver() }
 
 </body>
 </html>
