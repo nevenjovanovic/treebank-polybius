@@ -2,7 +2,7 @@ import module namespace polyb = "http://croala.ffzg.unizg.hr/polyb" at '../repo/
 
 (: call functions locally to better see what happens :)
 (: polyb:distrels() :)
-(: polyb:countsw() :)
+(: polyb:table( ("Sentences", "Words") , polyb:countsw()) :)
 (: polyb:stats("NON") :)
 (: polyb:analysis("NON") :)
-polyb:table( ("Sentences", "Words") , polyb:countsw())
+polyb:table(("Sentence number", "Dependent nodes") , polyb:stats("SBJ"))
