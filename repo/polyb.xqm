@@ -63,16 +63,9 @@ let $i := db:info($dbname)/databaseproperties
 
 declare function polyb:countsw(){
   element tbody {
-    element thead {
-      element tr {
-        element th {"Sentences"},
-        element th {"Words"}
-      }
-    },
-    
-    let $db := db:open("polybius-db-t")//treebank[@cts="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1.tb"]/body
+    let $db := db:open("polybius-db-t")//treebank
     let $scount := count($db/sentence)
-    let $wcount := count($db//word)
+    let $wcount := count($db//w)
     return
     element tr {
       element td {$scount},

@@ -5,4 +5,4 @@ import module namespace polyb = "http://croala.ffzg.unizg.hr/polyb" at '../repo/
 (: polyb:countsw() :)
 (: polyb:stats("NON") :)
 (: polyb:analysis("NON") :)
-polyb:distrels()
+polyb:table( ("Sentences", "Words") , polyb:countsw())
