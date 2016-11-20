@@ -44,3 +44,52 @@ declare function polyb:distrels(){
     }
   }
 };
+
+(: return a table :)
+declare function polyb:table ($labels, $tbody) {
+  element table {
+    element thead {
+      element tr {
+      for $l in $labels
+      return element th { $l }
+    }
+    },
+    $tbody
+  } 
+};
+
+(: return a table with sentence id and number of children elements for a relation :)
+declare function polyb:stats($relation){
+let $result :=  element tbody {
+for $w in collection("polybius-db-t")//w[@relation=$relation]
+let $s_id := $w/ancestor::sentence/@id
+let $depth := count($w/descendant-or-self::w)
+order by $depth descending , xs:integer(data($s_id))
+return element tr {
+  element td { $s_id , data($s_id) } ,
+  element td { $depth }
+}
+}
+return if ($result//td) then $result
+else element p {
+  "No such relation in the database!"
+}
+
+};
+
+declare function polyb:analysis($relation){
+let $stat := polyb:stats($relation)
+return if ($stat//td) then
+  let $body := element tbody {
+  for $s in $stat//td[2]
+  let $value := xs:integer($s/text())
+  group by $value
+  return element tr {
+    element td { $value },
+    element td { count($s)}
+  }
+}
+let $labels := ("Number of children nodes", "Occurrences")
+return polyb:table($labels , $body)
+else $stat
+};

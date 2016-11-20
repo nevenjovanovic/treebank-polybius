@@ -2,4 +2,6 @@ import module namespace polyb = "http://croala.ffzg.unizg.hr/polyb" at 'xqm/poly
 
 (: call functions locally to better see what happens :)
 (: polyb:distrels() :)
-polyb:countsw()
+(: polyb:countsw() :)
+(: polyb:stats("NON") :)
+polyb:analysis("NON")
