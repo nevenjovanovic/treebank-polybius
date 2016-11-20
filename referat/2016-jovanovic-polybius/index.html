@@ -57,10 +57,13 @@
 <section>
 <h2>The plan</h2>
 <p class="fragment"><b>What?</b></p>
-<p class="fragment"><b>How?</b> (At random, precisely, topically, comparatively)</p>
+<p class="fragment"><b>How?</b> (treebank, database, queries)</p>
 <p class="fragment"><b>To what end?</b></p>
 </section>
 <section><h1>What?</h1></section>
+<section>
+<img src="img/polybius-vase.jpg"/>
+</section>
 <section>
 					
   <h2>Polybius in the Perseus Catalog</h2>
@@ -78,6 +81,7 @@
   <p>The Ancient Greek and Latin Dependency Treebank (AGLDT) is the earliest treebank for Ancient Greek and Latin. The project started at Tufts University in 2006 and is currently developed and maintained at Leipzig University-Tufts University.</p>
   <p>License: <b>CC-BY</b>.</p>
 </section>
+<section><h1>How?</h1></section>
 <section>
   <h1>(Prague) syntactic dependency treebank</h1>
   <p>A <b>treebank</b> is a parsed text corpus that annotates syntactic or semantic sentence structure.</p>
@@ -88,117 +92,44 @@
 <section>
   <img src="img/Treebanking-Aesopus.png"/>
 </section>
+<section><h1>Database and queries</h1></section>
 <section>
   <h2>Exploring the treebank: which...?</h2>
   <p>Which syntactic functions are present in Histories 1?</p>
   <p>(A list of syntactic functions in the AGLDT 2 can be found <a href="https://github.com/PerseusDL/treebank_data/blob/master/AGDT2/guidelines/Greek_guidelines.md#prg_ann">here</a>.)</p>
-</section>
-<section>
-  <h2>Exploring the treebank: how many...?</h2>
   <p>How many occurrences of each syntactic function is present in Histories 1?</p>
+  <p><a href="http://croala.ffzg.unizg.hr/basex/polybrelations">Report</a> from the CroALa Polybius DB.</p>
 </section>
+
 <section>
-  <h2>Exploring the treebank: how...?</h2>
+  <h2>Exploring the treebank: configuration, complexity, frequency</h2>
   <p>How are syntactic functions construed, or configured, in Histories 1?</p>
   <p>Which configurations are simple, which are complex?</p>
   <p>Which configurations are more frequent, which are rare?</p>
+  <p><a href="http://croala.ffzg.unizg.hr/basex/polyboccur/ADV">Report (for the relation ADV)</a></p>
+  <p><a href="http://croala.ffzg.unizg.hr/basex/polybmorph/ADV/2">Report (for the relation ADV with the complexity of two dependent nodes)</a></p>
+</section>
+<section>
+  <h1>Conclusion</h1>
+  <p class="fragment"><b>To what end?</b></p>
+</section>
 
-</section>
 <section>
-  <h1>Flight from literature?</h1>
-  <p class="fragment"><a href="http://croala.ffzg.unizg.hr/basex/quaelibet">croala.ffzg.unizg.hr/basex/quaelibet</a></p>
-  <p class="fragment"><a href="https://bitbucket.org/nevenjovanovic/croalatransform/src/427358bc13e0414dc6fa146e6df4f53a4696a94b/xq/croala-explore/croala-explore.md?at=default&fileviewer=file-view-default">Documentation</a> (Bitbucket)</p>
-</section>
-<section>
-  <h1>How to point to a segment of text?</h1>
-</section>
-<section>
-  <h1>CITE/CTS</h1>				
-  <p><b>CITE Architecture and Canonical Text Service</b></p>
-  <p>Christopher Blackwell, Neel Smith (2010)</p>
-  <p>A specification for technology independent,
-    machine-actionable citation of scholarly resources.</p>
-  <p>eXist / XQuery, angularJs / jQuery, RDF, MySQL<br/>Homer Multitext, Perseus Digital Library.</p>
-  
-</section>
-<section>
-  <h1>A CTS URN</h1>
-  <h3>From CroALa</h3>
-<p>
-  urn:cts:croala:tubero.commentarii.croala-loci:body1.div9.div3.p2.s8.placeName26
-</p>
-</section>
-<section>
-  <h1>A CTS URN</h1>
-    <h3>From CroALa</h3>
-<p>
-  <font color="red">urn</font>:<font color="green">cts</font>:croala:<font color="blue">tubero</font>.<font color="fuchsia">commentarii</font>.<font color="maroon">croala-loci</font>:<font color="#330033">body1.div9.div3.p2.s8.placeName26</font>
-</p>
-</section>
-<section>
-  <h1>A CTS URN</h1>
-    <h3>From CroALa</h3>
-  <p>
-    <a href="http://croala.ffzg.unizg.hr/basex/cts/urn:cts:croala:tubero.commentarii.croala-loci:body1.div9.div3.p2.s8.placeName26">urn:cts:croala:tubero.commentarii.croala-loci:body1.div9.div3.p2.s8.placeName26</a>
-</p>
-</section>
-<section>
-  <h2>Insights from the CITE/CTS model</h2>
-  <p><b>Multiple</b> editions of the same text, each for a <b>specific, individual</b> purpose (text segmented into paragraphs, sentences, words and interpunction, metrical units; text marked for morphology, topics, named entities), each with <b>easily reachable</b> locations.</p>
-  <p>The system is <b>reproducible</b>; it is <b>tractable by machines</b>; it is <b>open to others</b>.</p>`
+  <h2>Available material, tools, methods</h2>
+  <p class="fragment">We have (Greek and Latin) texts which we can explore and transform freely, as necessary.</p>
+  <p class="fragment">There are (general, industrial quality) software tools that can be adapted for philological research.</p>
+  <p class="fragment">There are (general, industrial quality) procedures to control, document, and publish philological research digitally, using the internet.</p>
+
   </section>
 <section>
-  <h2>Insights from the CITE/CTS model</h2>
-  <p>Multiple notes point at locations:<br/>this location refers to a PLACE during a PERIOD.</p>
-  <p>Notes define relationships of points in different editions:<br/>this NOUN in ACCUSATIVE is a PLACE NAME referring to a FICTIONAL PLACE.</p>
-  <p>The system is reproducible; it is tractable by machines ("how many locations refer to places? in which parts of the text?"); it may be opened to others.</p>`
-  <p>Cf. a <a href="http://croala.ffzg.unizg.hr/basex/cp/list">test set of CroALA CTS URNs</a></p>
-</section>
+  <h2>An inductive Greek syntax?</h2>
+  <p>All this enables us to think about a complete grammar of a text which is described <b>inductively</b>, starting from the actual usages, and which takes into account the <b>frequencies</b> of linguistic phenomena.</p>
+  <p>This grammar does not have to be a 1000-pages thick printed book.</p>
+  </section>
 
 <section>
-  <h2>Cur lingua rerum index sit</h2>
-  <p>(Marko Marulić, <a href="http://croala.ffzg.unizg.hr/cgi-bin/getobject.pl?c.72:2:585.croala.2571915">Repertorium, Problemata Aristotelis</a>)</p>
-    <h3>Approaching CroALa through indices</h3>
-</section>
-<section>
-  <h2>Approaching CroALa through indices</h2>
-  <p>A list of <a href="http://solr.ffzg.hr/basex/wpersonae">persons in Croatian Latin school drama</a></p>
-  <p>A list of <a href="http://croala.ffzg.unizg.hr/basex/cp/citelist">place references</a> in CroALa as a CITE/CTS system<br/>(an ongoing collaboration with <a href="http://commons.pelagios.org/">Pelagios</a>)</p>
-
-</section>
-<section>
-  <h2>Ricorditi, lettor, se mai...</h2>
-  <h3>Approaching CroALa through comparation</h3>
-</section>
-<section>
-  <h2>Approaching CroALa through comparation</h2>
-  <p>Some of the interesting clausulae (verse endings) from the Poeti d' Italia in lingua latina occurring in CroALa as well: <a href="http://solr.ffzg.hr/basex/static/pdill-croalaren-uniq-rep3-longest-28.html">Clausulae trium verborum</a></p>
-  <p>Counting Latin authors in Croatia and in Tyrol:<br/><a href="http://solr.ffzg.hr/basex/auctores/periodi2">Croatica et Tyrolensia</a></p>
-</section>
-<section>
-  <h1>To what end?</h1>
-  <h3>(Conclusions)</h3>
-</section>
-<section>
-
-  <p>In the struggles with material agency [our] plans and goals too
-are at stake and liable to revision.  And thus the intentional
-character of human agency has a further aspect of temporal emergence,
-being reconfigured itself in the real time of practice, as well as a
-further aspect of intertwining with material agency, being
-reciprocally redefined with the contours of material agency in
-    tuning.
-    </p>
-    <p>
-    Andrew Pickering, <em>The Mangle of Practice: Time, Agency,
-      and Science</em> (1995)</p>
-</section>
-<section>
-  <p>What had started as an <em>ad hoc</em> collection of TEI-encoded texts with time grew into a forest; the forest needed a map, and there was a thing that could be developed into a map; we needed specific parts of the forest, and there were things that could be used to extract parts of it; we realized that similar plants are growing in other forests, and there were things that could be used to compare plants.</p>
-  <p>What had started as a collection of texts turned into something that has to be "manipulated" &mdash; accessed &mdash; at the atomic and molecular level. These levels, and processes of accessing them, turn out to be intriguing in themselves, beyond engineering (when there is a reference to the <em>urbes Italiae</em>, it seems to refer to...).</p>
-</section>
-<section>
-  <h1>To be continued</h1>
+  <img src="img/polybius-vase.jpg"/>
+  <h2>To be continued...</h2>
 </section>
 			</div>
 
