@@ -52,6 +52,10 @@ The scripts for this analysis were coded using the [Test-Driven Development](htt
 
 Dependencies that we want to analyse are easier to access if the original XML treebank is transformed from a "flat" structure (one sentence with many word nodes as children) into a "tree" (each governor-node word contains all word-nodes dependent on it). This transformation is achieved with the [scripts/transform-flat-into-tree.xq](scripts/transform-flat-into-tree.xq) script.
 
+# Released on Zenodo
+
+[![DOI](https://zenodo.org/badge/74203045.svg)](https://zenodo.org/badge/latestdoi/74203045)
+
 # License
 
 [CC-BY](LICENSE.md)
