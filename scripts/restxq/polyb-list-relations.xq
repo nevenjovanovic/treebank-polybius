@@ -15,7 +15,7 @@ declare variable $keywords := "Ancient Greek language, Prague dependency treeban
  : This function returns an XML response message.
  :)
 declare
-  %rest:path("polyb/relations")
+  %rest:path("polybrelations")
   %output:method(
   "xhtml"
 )

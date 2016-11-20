@@ -15,7 +15,7 @@ declare function polyb:htmlheadserver($title, $content, $keywords) {
 <meta name="author" content="Neven Jovanović, Department of Classical Philology, Faculty of Humanities and Social Sciences, University of Zagreb" />
 <link rel="icon" href="/basex/static/gfx/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="/basex/static/dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://github.com/nevenjovanovic/treebank-polybius/raw/master/css/basexpolyb.css"/>
+<link rel="stylesheet" type="text/css" href="/basex/static/dist/css/basexpolyb.css"/>
 </head>
 
 };
