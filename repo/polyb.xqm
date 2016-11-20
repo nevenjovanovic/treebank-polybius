@@ -12,7 +12,7 @@ declare function polyb:countsw(){
       }
     },
     
-    let $db := db:open("polybius-db")//treebank[@cts="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1.tb"]/body
+    let $db := db:open("polybius-db-t")//treebank[@cts="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1.tb"]/body
     let $scount := count($db/sentence)
     let $wcount := count($db//word)
     return
@@ -24,16 +24,10 @@ declare function polyb:countsw(){
 };
 
 declare function polyb:distrels(){
-  element tbody {
-    element thead {
-      element tr {
-        element th {"Function"},
-        element th {"Number of nodes"}
-      }
-    },
-    
-    let $db := db:open("polybius-db")//treebank[@cts="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1.tb"]/body
-    for $rels in $db//word
+  let $labels := ("Function", "Number of nodes")
+  let $tbody := element tbody {    
+    let $db := db:open("polybius-db-t")//treebank
+    for $rels in $db//w
     let $fvalue := $rels/@relation/string()
     group by $fvalue
     order by $fvalue
@@ -43,11 +37,13 @@ declare function polyb:distrels(){
       element td {count($rels)}
     }
   }
+  return polyb:table($labels, $tbody)
 };
 
 (: return a table :)
 declare function polyb:table ($labels, $tbody) {
   element table {
+    attribute  class { "table-striped  table-hover table-centered" } ,
     element thead {
       element tr {
       for $l in $labels
