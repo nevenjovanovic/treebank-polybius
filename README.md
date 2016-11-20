@@ -18,12 +18,17 @@ To illustrate possibilities of the AGLDT, which at the moment happens to contain
 
 This repository contains scripts needed to build a XML database of Polybius's Book 1 with treebank and morphology annotations, and to analyse the database.
 
+For a live demonstration, follow the topmost links at [www.bibsonomy.org/user/filologanoga/polybius](https://www.bibsonomy.org/user/filologanoga/polybius).
+
+For a visualization of the Polybius's treebank (using the Perseids Arethusa environment), see the [Polybius in Perseids](http://www.perseids.org/tools/arethusa/app/#/perseids?chunk=1&doc=27694).
+
 ### Prerequisites
 
 Some working knowledge of command line, Git, XML, XQuery, and BaseX.
 
 + [Git](https://git-scm.com/), a free and open source distributed version control system
 + [BaseX](http://basex.org/), a (freely available) XML Database engine and XPath/XQuery 3.1 Processor 
+
 ### Building the database
 
 Install the software as necessary (Git and BaseX).
@@ -32,12 +37,12 @@ Using Git, clone this repository.  From BaseX, run the [scripts/create-polybius-
 
 ### Exploring the database
 
-+ How many sentences and words are there in Polybius's Book 1?
-+ Which functions are there in the sentences of Polybius's Book 1?
-+ How many occurrences of each function is there?
-+ What is the maximum and minimum number of children nodes contained by each function?
-+ What do Polybius's predicates consist of?
-+ What do Polybius's subjects consist of?
++ How many sentences and words are there in Polybius's Book 1? - [Report](http://croala.ffzg.unizg.hr/basex/polybcounts)
++ Which syntactical relations exist in the sentences of Polybius's Book 1? - [Report](http://croala.ffzg.unizg.hr/basex/polybrelations)
++ How many occurrences of each syntactic relation is there? - [Report](http://croala.ffzg.unizg.hr/basex/polybrelations) (the same as above)
++ What is the maximum and minimum number of dependent nodes contained by each syntactic relation? - [Report for the relation **ADV**](http://croala.ffzg.unizg.hr/basex/polyboccur/ADV)
++ Which morphological configurations are used for a certain syntactic relation, and in what frequency? - [Report for the relation **ADV** with two dependent nodes](http://croala.ffzg.unizg.hr/basex/polybmorph/ADV/2)
+
 
 ## Tests
 
